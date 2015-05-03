@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">
+function removeFromCart()
+{
+	
+	alert("Item successfully removed from your cart.");
+}
+
+function checkout()
+{
+	if (document.getElementById("credit").checked == true)
+		{
+			window.location("#");
+		}
+	else if (document.getElementById("cash").checked == true)
+		{
+			alert("Your order was successfully processed! Please wait a few days for your order to arrive!");
+		}
+	else
+		{
+			alert("Choose a payment method!");
+		}
+}
+</script>
+<style>
+html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                
+}
+#tablebg{
+	background-color:#D1D0CE;
+	
+}
+	
+</style>
+  <title>View Cart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#625D5D;">
+<div id="background">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Amplify</a>
+    </div>
+    <div>
+    <!--  -->
+      <ul class="nav navbar-nav">
+      
+        <li><a href="HomepageLoggedIn.jsp">Home</a></li>
+      	<li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Products</a>
+      		<ul class="dropdown-menu">
+      			<li><a href="Instruments.html">Instruments</a></li>
+      			<li><a href="#">External devices</a></li>
+      			<li><a href="#">Miscellaneous</a></li>
+      		</ul>
+      	</li>
+      	
+        <li><a href="About.jsp">About</a></li>
+        <li><a href="#" class="btn btn-lg"><span class="glyphicon glyphicon-search"></span> <input type="text"placeholder="Search something!"></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+  	
+       <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-user"></span><!-- carlos dito mo ilagay yung name using request.getParameter("username") --> Kurt Valera</a>
+        <ul class="dropdown-menu">
+            <li><a href="#">View Profile</a></li>
+            <li><a href="#">Edit Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="ViewCart_1.html">View Cart</a></li>
+            <li><a href="Homepage.jsp">Logout</a></li>
+        </ul>
+    </li>
+        
+	</ul>
+    </div>
+ </div>
+</nav>
+  <br>
+  
+  
+  <div id="tablebg">
+ <table class="table" style="width:65%;" align="center">
+    <thead>
+        <tr>
+            <th>Instrument ID</th>
+            <th>Preview</th>
+            <th>Instrument name</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>4871628</td>
+            <td><img src = "images/lespaul.jpg" class="img-circle" height="150" width="150"></td>
+            <td><a href = "LesPaulPage.html">2015 Gibson Les Paul Standard</a></td>
+            <td>P 180,000</td>
+            <td><input class="btn btn-primary" type="submit" id="sign-in" value="Remove from cart" color="#566D7E" onclick="removeFromCart()"><br><br></td>
+        </tr>
+        <tr>
+            <td>3210981</td>
+            <td><img src = "images/jimifv.jpg" class="img-circle" height="150" width="150"></td>
+            <td><a href = "#">2006 Hendrix Psychadelic Flying V</a></td>
+            <td>P 345,000</td>
+            <td><input class="btn btn-primary" type="submit" id="sign-in" value="Remove from cart" color="#566D7E" onclick="removeFromCart()"><br><br></td>
+        </tr>
+        <tr>
+        	<td></td>
+        	<td></td>
+        	<td><input type="radio" id = "credit" name="payment_type" value="credit"><b>CREDIT</b>
+				<input type="radio" id = "cash" name="payment_type" value="cash"><b>CASH</b></td>
+        	<td><h5><b>Total: P 525,000</b></h5></td>
+        	<td><input class="btn btn-primary" type="submit" id="sign-in" value="Checkout" color="#566D7E" onclick = "checkout()"><br><br></td>
+    </tbody>
+</table>
+</div><!-- table bg div end -->
+</div>
+</body>
+</html>
