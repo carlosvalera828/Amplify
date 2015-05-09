@@ -30,7 +30,7 @@
       		</ul>
       	</li>
       	
-        <li><a href="About.jsp">About</a></li>
+        <li><a href="About.html">About</a></li>
         <li><a href="#" class="btn btn-lg"><span class="glyphicon glyphicon-search"></span> <input type="text"placeholder="Search something!"></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
